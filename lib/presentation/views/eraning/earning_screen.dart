@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:one_car_rental_driver_app/model/earning_model.dart';
 
 class EarningsScreen extends StatelessWidget {
+  const EarningsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Earnings'),
-        actions: [
-          const Padding(
+        actions: const [
+          Padding(
             padding: EdgeInsets.only(right: 16),
             child: Center(
               child: Text(
@@ -37,7 +39,7 @@ class EarningsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),

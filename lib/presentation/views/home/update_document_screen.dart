@@ -42,13 +42,13 @@ class _DocumentUpdateFormState extends State<DocumentUpdateForm> {
   }
 
   Widget buildLoadingView() {
-    return Center(
-      child: CircularProgressIndicator(),
+    return const Center(
+      child: const CircularProgressIndicator(),
     );
   }
 
   Widget buildSubmittedView() {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -220,7 +220,7 @@ class _DocumentUpdateFormState extends State<DocumentUpdateForm> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Center(
@@ -231,7 +231,7 @@ class _DocumentUpdateFormState extends State<DocumentUpdateForm> {
                             phoneNumber: widget.phoneNumber);
                       }
                     },
-                    child: CommonButton(title: 'Submit', width: 200.0),
+                    child: const CommonButton(title: 'Submit', width: 200.0),
                   ),
                 ),
               ],

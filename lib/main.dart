@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:one_car_rental_driver_app/firebase_options.dart';
 import 'package:one_car_rental_driver_app/presentation/views/auth/login_screen.dart';
-import 'package:one_car_rental_driver_app/presentation/views/auth/sign_up_screen.dart';
 import 'package:one_car_rental_driver_app/presentation/views/eraning/earning_screen.dart';
 import 'package:one_car_rental_driver_app/res/colors/colors.dart';
 
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: EarningsScreen(),
+      home: LoginScreen(),
     );
   }
 }
