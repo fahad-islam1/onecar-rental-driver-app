@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:one_car_rental_driver_app/data/services/firebase/firestore_service.dart';
-import 'package:one_car_rental_driver_app/presentation/views/home/update_document_screen.dart';
+import 'package:one_car_rental_driver_app/presentation/views/documents/update_document_screen.dart';
 import 'package:one_car_rental_driver_app/res/colors/utils/snackmsg.dart';
 
 class OtpVerificationController extends GetxController {

@@ -9,6 +9,7 @@ import 'package:one_car_rental_driver_app/res/colors/utils/snackmsg.dart';
 class DocumentUpdateViewModel extends GetxController {
   final DocumentStoreService _storeService = DocumentStoreService();
   final FirestorageService storageService = FirestorageService();
+  final formKey = GlobalKey<FormState>();
 
   RxBool isLoading = false.obs;
   var submitted = false.obs;
