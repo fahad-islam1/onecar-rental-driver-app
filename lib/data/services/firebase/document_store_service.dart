@@ -13,11 +13,29 @@ class DocumentStoreService {
     required String drivingLicenseBackImageUrl,
     required String emiratesIdFrontImageUrl,
     required String emiratesIdBackImageUrl,
-    required String driverImage, 
-
+    required String driverImage,
   }) async {
     try {
+
+      final driverSnapshot = await _firestore.collection('drivers').doc(phoneNumber).get();
+
+      final firstName = driverSnapshot['firstName'];
+      final lastName = driverSnapshot['lastName'];
+      final email = driverSnapshot['email'];
+      final city = driverSnapshot['city'];
+      final license = driverSnapshot['license'];
+      final language = driverSnapshot['language'];
+      final termsAccepted = driverSnapshot['termsAccepted'];
+
+   
       await _firestore.collection('driverrequest').doc(phoneNumber).set({
+        'firstName': firstName,
+        'lastName': lastName,
+        'email': email,
+        'city': city,
+        'license': license,
+        'language': language,
+        'termsAccepted': termsAccepted,
         'drivingLicenseIssuanceDate': drivingLicenseIssuanceDate,
         'drivingLicenseExpiryDate': drivingLicenseExpiryDate,
         'emiratesIdIssuanceDate': emiratesIdIssuanceDate,
@@ -26,7 +44,7 @@ class DocumentStoreService {
         'drivingLicenseBackImageUrl': drivingLicenseBackImageUrl,
         'emiratesIdFrontImageUrl': emiratesIdFrontImageUrl,
         'emiratesIdBackImageUrl': emiratesIdBackImageUrl,
-        'driverimage': driverImage,
+        'driverImage': driverImage,
       });
     } catch (e) {
       print('Error saving document data: $e');

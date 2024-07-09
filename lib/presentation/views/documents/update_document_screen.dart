@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:one_car_rental_driver_app/presentation/components/common/common_btn.dart';
 import 'package:one_car_rental_driver_app/presentation/components/documents/date_field.dart';
 import 'package:one_car_rental_driver_app/presentation/components/documents/attach_file.dart';
-import 'package:one_car_rental_driver_app/presentation/view_model/home/document_update_view_model.dart';
+import 'package:one_car_rental_driver_app/presentation/view_model/documents/document_update_view_model.dart';
 import 'package:one_car_rental_driver_app/res/colors/colors.dart';
 
 class DocumentUpdateForm extends StatelessWidget {
